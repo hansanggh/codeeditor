@@ -4,11 +4,14 @@
     "target": "ESNext",
     "moduleResolution": "node",
     "jsx": "react-jsx",
-    "baseUrl": "./",
-
-    "isolatedModules": true,
+    "baseUrl": ".",
+    // "paths": {
+    //   "@_js/*": ["public/js/*"]
+    // },
+    "allowJs": true,
     "strict": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
+    "isolatedModules":false
   }
 }

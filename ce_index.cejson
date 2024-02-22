@@ -1,0 +1,21 @@
+{
+    "index" : {
+        "path" : "",
+        "name" : ""
+    },
+    "files" : [
+	{
+            "path" : "/Users/onetable/Documents/repo/기타등등/codeEditor2/src",
+            "name" : "13-terrain.html"
+        },
+        {
+            "path" : "/Users/onetable/Documents/repo/기타등등/codeEditor2/src/js",
+            "name" : "file.js"
+        },
+        {
+            "path" : "/Users/onetable/Documents/repo/기타등등/codeEditor2/src",
+            "name" : "codeEditor.html"
+        }
+        
+    ]
+}

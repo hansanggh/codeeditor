@@ -44,7 +44,7 @@
 .editor-container { position: relative; min-height:100px; max-height:80vh; overflow:auto; }
 .editor-container .s_script, .highlighting-code { position: absolute; top: 0; left: 0; margin: 0; }
 .editor-container .s_script, .highlighting-code { padding: 5px; font-family: 'Nanum Gothic Coding', monospace; font-size: 12px; line-height: 15px; }
-.editor-container .s_script { color: transparent; background-color: transparent; z-index: 1; caret-color: red; min-height:50px; 
+.editor-container .s_script { resize: none; color: transparent; background-color: transparent; z-index: 1; caret-color: red; min-height:50px;
     border: 1px solid #ddd; border-radius: 3px; width:98%; }
 .highlighting-code { z-index: 0; background:unset; border:0; }
 .highlighting-code code { font-family: 'Nanum Gothic Coding', monospace; }
@@ -110,7 +110,7 @@ width: 80vw;
 
 .bottomBtn {
 position : absolute;
-bottom : 17px;
+bottom : 40px;
 right : 100px;
 z-index : 1;
 width: 50px;
@@ -127,7 +127,7 @@ background-position: center center;
 
 .bottomBtn:hover{
 position : absolute;
-bottom : 17px;
+bottom : 40px;
 right : 100px;
 z-index : 1;
 width: 52px;
@@ -150,7 +150,8 @@ display: none;
 #log-container { 
 
   position: absolute;
-  top: 80vh;
+  z-index: 5;
+  top: 65vh;
   right: 5vw;
   width: 70vw;
   height: 30vh;
@@ -179,10 +180,30 @@ display: none;
   left: 50%;
   transform: translate(-50%, -50%);
 
-  border: 7px solid rgb(208, 205, 205);
-  border-radius: 15px;
+  border: 3px solid rgb(208, 205, 205);
+  border-radius: 5px;
   background : rgba(241, 249, 160, 0.7);
   cursor: move;
+
+}
+
+.fileSystemModalContainer {
+  width: auto;
+  height: auto;
+
+  z-index: 999;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border: 3px solid rgb(208, 205, 205);
+  border-radius: 5px;
+  background : rgba(50, 150, 50, 0.7);
+  cursor: move;
+
+  padding: 30px 30px;
 
 }
 
@@ -230,10 +251,17 @@ display: none;
 @import url("../public/css/xterm.css");
 #terminal {
   position: absolute;
-  top: 80vh;
+  z-index: 5;
+  top: 65vh;
   right: 5vw;
   width: 90vw;
   height: 20vh;
   border: 4px solid rgb(208, 205, 205);
   overflow: hidden;
 }
+
+pre > code {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+

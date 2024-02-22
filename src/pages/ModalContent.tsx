@@ -13,7 +13,6 @@ const ModalContent = (props : any ) =>{
             if (event && modalRef.current && !modalRef.current.contains(event.target as HTMLElement) ) {
                 props.setModalOpen(false);
             }
-            
         };
         document.addEventListener('mousedown', handler);
         
@@ -29,9 +28,9 @@ const ModalContent = (props : any ) =>{
                 <button className="close" onClick={closeModal}>
                     X
                 </button>
-                <p>기존 인덱스파일에 저장하시겠습니까?</p>
+                <p>{props.contents}</p>
                 <div className="modalBtn">
-                    <button className="yes" >yes</button>
+                    <button className="yes" onClick={props.yesCallbackFunc}>yes</button>
                     <button className="no" >no</button>
                 </div>
             </div>
